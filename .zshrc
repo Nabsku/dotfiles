@@ -15,11 +15,12 @@ zstyle ':omz:update' mode auto
 
 source $ZSH/oh-my-zsh.sh
 
+
 # [Aliases]
-source $ZSH_CUSTOM/kubectl.zsh
-source $ZSH_CUSTOM/ls.zsh
-source $ZSH_CUSTOM/zellij.zsh
-source $ZSH_CUSTOM/nvim.zsh
+source ~/.config/zsh/aliases/kubectl.zsh
+source ~/.config/zsh/aliases/ls.zsh
+source ~/.config/zsh/aliases/zellij.zsh
+source ~/.config/zsh/aliases/nvim.zsh
 
 # [Evals]
 eval "$(atuin init --disable-up-arrow zsh)"
@@ -29,7 +30,7 @@ eval "$(brew shellenv)"
 # [fpath] trickery
 export fpath=(
     $fpath
-    $ZSH_CUSTOM/completion
+    "~/.config/zsh/completion"
     $(brew --prefix)/share/zsh-completions
 )
 
@@ -37,9 +38,9 @@ export fpath=(
 zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/.zcompcache"
-zstyle :compinstall filename '/Users/yannick/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit && compinit -C
-source ~/.oh-my-zsh/custom/completion/kubectl.zsh
+source ~/.config/zsh/completion/kubectl.zsh
 
 # [Exports]
 export LANG=en_US.UTF-8
