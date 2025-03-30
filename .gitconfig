@@ -1,0 +1,16 @@
+[user]
+	name = Yannick Wahner
+	email = thenabsku@gmail.com
+	; signingkey = F38EA7F576104903
+[core]
+	editor = nvim
+  pager = delta --dark --line-numbers --diff-so-fancy --paging=never
+[alias]
+	c = commit -s
+  commit = commit --signoff
+; [commit]
+; 	gpgsign = true
+[pull]
+	rebase = true
+[rerere]
+	enabled = true

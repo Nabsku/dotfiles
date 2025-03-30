@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+
+services:
+  git.itsg.de: gitlab:git.itsg.de
+os:
+  editPreset: nvim-remote
+  openLink: wslview "{{link}}"
+update:
+  method: never
+gui:
+  nerdFontsVersion: "3"
+  branchColorPatterns:
+    "^feature/": "#ff5733"
+    "^bugfix/": "#343deb"
+    "^hotfix/": "#ff3333"
+    "^fix/": "#ff3333"
+    "^lifecycle/": "#33ff33"
+    "^renovate/": "#33ff33"
+    "^chore/": "#b434eb"
+  statusPanelView: allBranchesLog
+  showNumstatInFilesView: true
+  expandFocusedSidePanel: true
+git:
+  parseEmoji: true
+  paging:
+    pager: delta --dark --line-numbers --diff-so-fancy --paging=never
+  commit:
+    signOff: true
+    autoWrapCommitMessage: true
+    autoWrapWidth: 72
+  commitPrefix:
+    - pattern: "^\\w+\\/(\\w+-\\w+).*"
+      replace: "$1 - "
+disableStartupPopups: true
