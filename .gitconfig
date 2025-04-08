@@ -1,6 +1,8 @@
+[init]
+	defaultBranch = main
 [user]
 	name = Yannick Wahner
-	email = thenabsku@gmail.com
+	email = yannick.wahner@itsg.de
 	; signingkey = F38EA7F576104903
 [core]
 	editor = nvim
@@ -14,3 +16,7 @@
 	rebase = true
 [rerere]
 	enabled = true
+
+[includeIf "gitdir:~/github/"]
+  path = ~/.gitconfig-github
+
