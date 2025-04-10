@@ -27,7 +27,7 @@ This is my .dotfiles repository. It contains my configuration files and scripts 
 All that in one easy command:
 
 ```bash
-brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "k9s" "jq" "vault" "go"
+brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go"
 ```
 
 Installation of python tools:
