@@ -63,6 +63,8 @@ zstyle ':completion:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/.zcompcac
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit && compinit
 source ~/.config/zsh/completion/kubectl.zsh
+source ~/.config/zsh/completion/dagger.zsh
+source ~/.config/zsh/completion/talosctl.zsh
 
 # [Exports]
 export LANG=en_US.UTF-8
