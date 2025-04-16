@@ -15,7 +15,7 @@ k9s:
     defaultsToFullScreen: true
     skin: gruvbox
   skipLatestRevCheck: true
-  disablePodCounting: false
+  disablePodCounting: true
   shellPod:
     image: busybox:1.35.0
     namespace: default

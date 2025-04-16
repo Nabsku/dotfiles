@@ -21,4 +21,5 @@ return {
   { import = "astrocommunity.pack.full-dadbod" },
   -- Colorscheme
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity/recipes/neo-tree-dark" },
 }
