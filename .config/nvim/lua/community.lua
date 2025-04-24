@@ -4,7 +4,6 @@ return {
   { import = "astrocommunity.pack.ansible" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.helm" },
-  { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.go" },

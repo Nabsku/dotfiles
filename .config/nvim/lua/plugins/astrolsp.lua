@@ -4,7 +4,7 @@ return {
   ---@type AstroLSPOpts
   opts = {
     features = {
-      codelens = false, -- enable/disable codelens refresh on start
+      codelens = true, -- enable/disable codelens refresh on start
       inlay_hints = true, -- enable/disable inlay hints on start
       signature_help = true, -- enable automatic signature help popup globally on startup
       semantic_tokens = true, -- enable/disable semantic token highlighting
