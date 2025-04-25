@@ -48,6 +48,7 @@ source $ZSH/oh-my-zsh.sh
     eval "$(atuin init --disable-up-arrow zsh)"
     eval "$(zellij setup --generate-auto-start zsh)"
     eval "$(brew shellenv)"
+    eval "$(omnictl completion zsh)"
 }
 # [fpath] trickery
 export fpath=(
@@ -62,12 +63,15 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zsh/.zcompcache"
 zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit && compinit
+
+# [Sources]
 source ~/.config/zsh/completion/kubectl.zsh
 source ~/.config/zsh/completion/dagger.zsh
 source ~/.config/zsh/completion/talosctl.zsh
+source <(konf-go shellwrapper zsh)
 
 # [Exports]
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:/opt/homebrew/opt/ruby/bin:$PATH"
 export EDITOR="nvim"
