@@ -20,3 +20,6 @@
 [includeIf "gitdir:~/github/"]
   path = ~/.gitconfig-github
 
+[includeIf "gitdir:~/README.md"]
+	path = ~/.gitconfig-github
+
