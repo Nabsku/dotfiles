@@ -41,7 +41,6 @@ source $ZSH/oh-my-zsh.sh
     source ~/.config/zsh/aliases/zellij.zsh
     source ~/.config/zsh/aliases/nvim.zsh
     source ~/.config/zsh/aliases/cat.zsh
-    alias cd=zoxide
 }
 
 # [Evals]
@@ -50,6 +49,7 @@ source $ZSH/oh-my-zsh.sh
     eval "$(zellij setup --generate-auto-start zsh)"
     eval "$(brew shellenv)"
     eval "$(omnictl completion zsh)"
+    eval "$(zoxide init zsh)"
 }
 # [fpath] trickery
 export fpath=(
