@@ -1,25 +1,23 @@
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [user]
-	name = Yannick Wahner
-	email = yannick.wahner@itsg.de
-	; signingkey = F38EA7F576104903
+  name = Yannick Wahner
+  email = yannick.wahner@itsg.de
+  ;signingkey = F38EA7F576104903
 [core]
-	editor = nvim
+  editor = nvim
   pager = delta --dark --line-numbers --diff-so-fancy --paging=never
 [alias]
-	c = commit -s
+  c = commit -s
   commit = commit --signoff
-; [commit]
-; 	gpgsign = true
 [pull]
-	rebase = true
+  rebase = true
 [rerere]
-	enabled = true
+  enabled = true
 
 [includeIf "gitdir:~/github/"]
   path = ~/.gitconfig-github
 
 [includeIf "gitdir:~/README.md"]
-	path = ~/.gitconfig-github
+  path = ~/.gitconfig-github
 
