@@ -31,7 +31,7 @@ plugins=(
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode auto
 
-+export GITHUB_TOKEN=$(gh auth token)
+export GITHUB_TOKEN=$(gh auth token)
 source $ZSH/oh-my-zsh.sh
 
 # [Aliases]
@@ -41,6 +41,7 @@ source $ZSH/oh-my-zsh.sh
     source ~/.config/zsh/aliases/zellij.zsh
     source ~/.config/zsh/aliases/nvim.zsh
     source ~/.config/zsh/aliases/cat.zsh
+    alias cd=zoxide
 }
 
 # [Evals]
