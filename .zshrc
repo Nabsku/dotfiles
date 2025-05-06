@@ -11,7 +11,7 @@
 # [Theme magic]
 {
     if [[ ! -d ~/.oh-my-zsh/themes/catppuccin-flavors ]]; then
-        mkdir -p ~/.oh-my-zsh/themes/catppuccin-flavors 
+        mkdir -p ~/.oh-my-zsh/themes/catppuccin-flavors
     fi
 
     ln -sf ~/.config/JannoTjarks/catppuccin-zsh/catppuccin.zsh-theme ~/.oh-my-zsh/themes/
@@ -31,8 +31,8 @@ plugins=(
 export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode auto
 
++export GITHUB_TOKEN=$(gh auth token)
 source $ZSH/oh-my-zsh.sh
-
 
 # [Aliases]
 {
