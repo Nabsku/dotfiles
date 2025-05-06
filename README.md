@@ -23,11 +23,12 @@ This is my .dotfiles repository. It contains my configuration files and scripts 
 - [jq](https://github.com/jqlang/jq) - A lightweight and flexible command-line JSON processor
 - [vault](https://github.com/hashicorp/vault) - A tool for managing secrets and sensitive data
 - [go](https://github.com/golang/go) - A programming language designed for building simple, reliable, and efficient software
+- [stern](https://github.com/stern/stern) - A multi pod and container log tailing tool for Kubernetes
 
 All that in one easy command:
 
 ```bash
-brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go"
+brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern"
 ```
 
 Installation of python tools:
