@@ -1,6 +1,6 @@
 plugins:
   watch-events:
-    shortCut: Shift-E
+    shortCut: Ctrl-E
     confirm: false
     description: Get Events for resource
     scopes:

@@ -1,5 +1,5 @@
 plugin:
-  crd:
+  explore:
     shortCut: Shift-E
     description: Explore
     scopes:
