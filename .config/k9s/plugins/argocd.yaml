@@ -1,4 +1,16 @@
 plugins:
+  argo-open-app:
+    shortCut: Ctrl-O
+    description: Open ArgoCD Infra
+    scopes:
+      - all
+    command: bash
+    confirm: false
+    args:
+      - -c
+      - open $(oc get cm -n argocd-infra argocd-cm  -ojsonpath='{.data.url}')
+    background: true
+  # doesnt work.. yet
   argo-login:
     shortCut: Shift-L
     description: Login to ArgoCD
@@ -24,7 +36,6 @@ plugins:
       - $NAMESPACE
     background: true
     confirm: true
-
   refresh-apps:
     shortCut: Shift-R
     confirm: false
@@ -32,11 +43,10 @@ plugins:
       - apps
     description: Refresh a argocd app hard
     command: bash
-    background: false
+    background: true
     args:
       - -c
       - "kubectl annotate applications -n argocd $NAME argocd.argoproj.io/refresh=hard"
-
   disable-auto-sync:
     shortCut: Shift-J
     confirm: false
@@ -44,7 +54,7 @@ plugins:
       - apps
     description: Disable argocd sync
     command: kubectl
-    background: false
+    background: true
     args:
       - patch
       - applications
@@ -53,7 +63,6 @@ plugins:
       - $NAME
       - "--type=json"
       - '-p=[{"op":"replace", "path": "/spec/syncPolicy", "value": {}}]'
-
   enable-auto-sync:
     shortCut: Shift-B
     confirm: false
@@ -61,7 +70,7 @@ plugins:
       - apps
     description: Enable argocd sync
     command: kubectl
-    background: false
+    background: true
     args:
       - patch
       - applications
