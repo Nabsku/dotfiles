@@ -1,9 +1,11 @@
-plugin:
+plugins:
   explore:
     shortCut: Shift-E
     description: Explore
     scopes:
       - crd
+      - crds
+      - customresourcedefinitions
     command: kubectl
     background: false
     args:
@@ -12,4 +14,4 @@ plugin:
       - $NAMESPACE
       - --context
       - $CONTEXT
-      - --request-timeout=1m
+      - $COL-KIND
