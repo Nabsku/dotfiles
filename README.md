@@ -26,11 +26,12 @@ This is my .dotfiles repository. It contains my configuration files and scripts 
 - [stern](https://github.com/stern/stern) - A multi pod and container log tailing tool for Kubernetes
 - [helm-docs](https://github.com/norwoodj/helm-docs) - A tool for generating documentation for Helm charts
 - [krew](https://github.com/kubernetes-sigs/krew) - A plugin manager for kubectl
+- [glow](https://github.com/charmbracelet/glow) - Render markdown on the CLI, with pizzazz!
 
 All that in one easy command:
 
 ```bash
-brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew"
+brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew" "glow"
 ```
 
 Installation of python tools:
@@ -49,11 +50,11 @@ uv tool install --python 3.13 posting
 For OpenShift:
 
 ```bash
-oc krew install cnpg explore neat cond
+oc krew install cnpg explore neat cond node-resource
 ```
 
 For Kubernetes:
 
 ```bash
-kubectl krew install cnpg explore neat cond
+kubectl krew install cnpg explore neat cond node-resource
 ```
