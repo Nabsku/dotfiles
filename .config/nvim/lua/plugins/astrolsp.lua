@@ -4,29 +4,23 @@ return {
   ---@type AstroLSPOpts
   opts = {
     features = {
-      codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = true, -- enable/disable inlay hints on start
-      signature_help = true, -- enable automatic signature help popup globally on startup
-      semantic_tokens = true, -- enable/disable semantic token highlighting
+      codelens = true,
+      inlay_hints = true,
+      signature_help = true,
+      semantic_tokens = true,
     },
     formatting = {
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
-        allow_filetypes = { -- enable format on save for specified filetypes only
+        enabled = true,
+        allow_filetypes = {
           -- "go",
         },
-        ignore_filetypes = { -- disable format on save for specified filetypes
+        ignore_filetypes = {
           -- "python",
         },
       },
-      disabled = { -- disable formatting capabilities for the listed language servers
-        -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
-      },
-      timeout_ms = 1000, -- default format timeout
-      -- filter = function(client) -- fully override the default formatting function
-      --   return true
-      -- end
+      disabled = {},
+      timeout_ms = 1000,
     },
     servers = {
       -- "pyright"

@@ -1,0 +1,23 @@
+plugins:
+  ingress-open-in-browser:
+    shortCut: Shift-I
+    description: Open Ingress in Namespace
+    scopes:
+      - ingress
+    command: bash
+    confirm: false
+    args:
+      - -c
+      - open "https://$(kubectl get ingress -n $NAMESPACE -o json 2> /dev/null | jq -r '.items[] | .spec.rules[] | .host as $host | .http.paths[] | ( $host + .path)' | sort | grep -v ^/ | fzf)"
+    background: false
+  route-open-in-browser:
+    shortCut: Shift-I
+    description: Open Routes in Namespace
+    scopes:
+      - route
+    command: bash
+    confirm: false
+    args:
+      - -c
+      - open "https://$(kubectl get route -n $NAMESPACE -o json 2> /dev/null | jq -r '.items[] | .spec | .host as $host | ($host + .path)' | sort | grep -v ^/ | fzf)"
+    background: false

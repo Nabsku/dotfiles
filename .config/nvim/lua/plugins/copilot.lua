@@ -7,7 +7,7 @@ return {
     suggestion = {
       auto_trigger = true,
       keymap = {
-        accept = false, -- handled by completion engine
+        accept = false,
       },
     },
     copilot_model = "gpt-4o-copilot",
@@ -37,7 +37,6 @@ return {
       opts = {
         options = {
           g = {
-            -- set the ai_accept function
             ai_accept = function()
               if require("copilot.suggestion").is_visible() then
                 require("copilot.suggestion").accept()
