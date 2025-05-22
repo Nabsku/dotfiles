@@ -1,0 +1,19 @@
+- name: openai/gpt-4o
+  extra_params:
+    api_base: https://api.githubcopilot.com
+    extra_headers:
+      Editor-Version: Aider/0.83.1
+      Copilot-Integration-Id: vscode-chat
+    max_tokens: 8192
+- name: openai/claude-3.7-sonnet
+  extra_params:
+    extra_headers:
+      Editor-Version: Aider/0.83
+      Copilot-Integration-Id: vscode-chat
+    max_tokens: 8192
+- name: openai/gpt-4.1
+  extra_params:
+    extra_headers:
+      Editor-Version: Aider/0.83.1
+      Copilot-Integration-Id: vscode-chat
+    max_tokens: 8192
