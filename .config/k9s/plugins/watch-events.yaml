@@ -1,6 +1,6 @@
 plugins:
   watch-events:
-    shortCut: Ctrl-E
+    shortCut: Shift-W
     confirm: false
     description: Get Events for resource
     scopes:
@@ -9,4 +9,4 @@ plugins:
     background: false
     args:
       - -c
-      - "kubectl events --context $CONTEXT --namespace $NAMESPACE --for $RESOURCE_NAME.$RESOURCE_GROUP/$NAME --watch"
+      - "kubectl events --namespace $NAMESPACE --for $RESOURCE_NAME.$RESOURCE_GROUP/$NAME --watch"
