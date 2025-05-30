@@ -9,4 +9,4 @@ plugins:
     background: false
     args:
       - -c
-      - "kubectl events --namespace $NAMESPACE --for $RESOURCE_NAME.$RESOURCE_GROUP/$NAME --watch"
+      - kubectl --context "$CONTEXT" events --namespace $NAMESPACE --for $RESOURCE_NAME.$RESOURCE_GROUP/$NAME --watch

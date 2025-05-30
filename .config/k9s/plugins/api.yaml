@@ -7,5 +7,5 @@ plugins:
     command: bash
     args:
       - -c
-      - stern -n openshift-kube-apiserver -l app=openshift-kube-apiserver --container kube-apiserver --tail 300
+      - stern --context "$CONTEXT" -n openshift-kube-apiserver -l app=openshift-kube-apiserver --container "kube-apiserver$" --tail 300
     background: false

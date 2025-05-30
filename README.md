@@ -27,11 +27,13 @@ This is my .dotfiles repository. It contains my configuration files and scripts 
 - [helm-docs](https://github.com/norwoodj/helm-docs) - A tool for generating documentation for Helm charts
 - [krew](https://github.com/kubernetes-sigs/krew) - A plugin manager for kubectl
 - [glow](https://github.com/charmbracelet/glow) - Render markdown on the CLI, with pizzazz!
+- [yazi](https://github.com/sxyazi/yazi) - A terminal file manager that is fast, simple, and easy to use.
+- [ffmpeg](https://git.ffmpeg.org/ffmpeg.git) - A complete, cross-platform solution to record, convert and stream audio and video.
 
 All that in one easy command:
 
 ```bash
-brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew" "glow"
+brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew" "glow" "yazi" "ffmpeg" "imagemagick" "resvg" "poppler" "fd"
 ```
 
 Installation of python tools:

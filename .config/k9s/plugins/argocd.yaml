@@ -8,56 +8,42 @@ plugins:
     confirm: false
     args:
       - -c
-      - open $(oc get cm -n argocd-infra argocd-cm  -ojsonpath='{.data.url}')
+      - open $(oc --context "$CONTEXT" get cm -n argocd-infra argocd-cm  -ojsonpath='{.data.url}')
     background: true
-  # doesnt work.. yet
-  argo-login:
-    shortCut: Shift-L
-    description: Login to ArgoCD
-    scopes:
-      - apps
-    command: bash
-    args:
-      - -c
-      - url=$(oc get cm -n argocd-infra argocd-cm  -ojsonpath='{.data.url}')
-      - argocd login $url --core
-    background: false
-  argocd:
-    shortCut: "s"
-    description: Sync ArgoCD Application
-    scopes:
-      - application
-    command: argocd
-    args:
-      - app
-      - sync
-      - $NAME
-      - --app-namespace
-      - $NAMESPACE
-    background: true
-    confirm: true
   refresh-apps:
-    shortCut: Shift-R
+    shortCut: "r"
     confirm: false
     scopes:
       - apps
     description: Refresh a argocd app hard
-    command: bash
+    command: kubectl
     background: true
     args:
-      - -c
-      - "kubectl annotate applications -n $NAMESPACE $NAME argocd.argoproj.io/refresh=hard"
+      - annotate
+      - --context
+      - $CONTEXT
+      - applications
+      - -n
+      - $NAMESPACE
+      - $NAME
+      - argocd.argoproj.io/refresh=hard
   refresh-appset:
-    shortCut: Shift-R
+    shortCut: "r"
     confirm: false
     scopes:
       - applicationset
     description: Refresh a ArgoCD AppSet
-    command: bash
+    command: kubectl
     background: true
     args:
-      - -c
-      - "kubectl annotate applicationset -n $NAMESPACE $NAME argocd.argoproj.io/application-set-refresh=true"
+      - annotate
+      - --context
+      - $CONTEXT
+      - applicationset
+      - -n
+      - $NAMESPACE
+      - $NAME
+      - argocd.argoproj.io/application-set-refresh=true
   disable-auto-sync:
     shortCut: Shift-J
     confirm: false
@@ -68,6 +54,8 @@ plugins:
     background: true
     args:
       - patch
+      - --context
+      - $CONTEXT
       - applications
       - -n
       - $NAMESPACE
@@ -84,6 +72,8 @@ plugins:
     background: true
     args:
       - patch
+      - --context
+      - $CONTEXT
       - applications
       - -n
       - $NAMESPACE

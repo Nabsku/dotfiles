@@ -8,7 +8,7 @@ plugins:
     confirm: false
     args:
       - -c
-      - open "https://$(kubectl get ingress -n $NAMESPACE -o json 2> /dev/null | jq -r '.items[] | .spec.rules[] | .host as $host | .http.paths[] | ( $host + .path)' | sort | grep -v ^/ | fzf)"
+      - open "https://$(kubectl --context "$CONTEXT" get ingress -n $NAMESPACE -o json 2> /dev/null | jq -r '.items[] | .spec.rules[] | .host as $host | .http.paths[] | ( $host + .path)' | sort | grep -v ^/ | fzf)"
     background: false
   route-open-in-browser:
     shortCut: Shift-I
@@ -19,5 +19,5 @@ plugins:
     confirm: false
     args:
       - -c
-      - open "https://$(kubectl get route -n $NAMESPACE -o json 2> /dev/null | jq -r '.items[] | .spec | .host as $host | ($host + .path)' | sort | grep -v ^/ | fzf)"
+      - open "https://$(kubectl --context "$CONTEXT" get route -n $NAMESPACE -o json 2> /dev/null | jq -r '.items[] | .spec | .host as $host | ($host + .path)' | sort | grep -v ^/ | fzf)"
     background: false
