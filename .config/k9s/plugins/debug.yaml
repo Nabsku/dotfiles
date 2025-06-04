@@ -1,0 +1,42 @@
+plugins:
+  debug:
+    shortCut: Shift-D
+    description: Add debug container
+    dangerous: true
+    scopes:
+      - pods
+      - deployments
+      - replicasets
+      - statefulsets
+      - daemonsets
+    command: bash
+    background: false
+    confirm: true
+    args:
+      - -c
+      - "kubectl debug -it --context $CONTEXT -n $NAMESPACE $NAME --image=busybox:glibc --share-processes -- sh"
+  spawn-pvc-pod:
+    shortCut: Shift-P
+    confirm: true
+    description: "Spawn a BusyBox pod with a selected PVC attached at /mnt"
+    scopes:
+      - pvc
+    command: bash
+    args:
+      - -c
+      - |
+        POD=temp-pod-$NAME
+        kubectl delete pod $POD -n $NAMESPACE --ignore-not-found
+        kubectl run $POD \
+          --namespace=$NAMESPACE \
+          --image=busybox \
+          --restart=Never \
+          --overrides="{
+            \"spec\":{
+              \"volumes\":[{\"name\":\"mypvc\",\"persistentVolumeClaim\":{\"claimName\":\"$NAME\"}}],
+              \"containers\":[{\"name\":\"busybox\",\"image\":\"busybox\",\"command\":[\"sleep\",\"3600\"],\"volumeMounts\":[{\"mountPath\":\"/mnt\",\"name\":\"mypvc\"}]}]
+            }
+          }" && \
+        kubectl wait -n $NAMESPACE --for=condition=Ready pod/$POD --timeout=60s && \
+        kubectl exec -n $NAMESPACE -it $POD -- /bin/sh
+        kubectl delete pod $POD -n $NAMESPACE --ignore-not-found --grace-period=5

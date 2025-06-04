@@ -4,20 +4,22 @@ k9s:
   refreshRate: 2
   maxConnRetry: 5
   readOnly: false
-  noExitOnCtrlC: false
+  noExitOnCtrlC: true
   ui:
     enableMouse: true
     headless: false
     logoless: true
     crumbsless: false
+    splashless: true
     reactive: true
     noIcons: false
     defaultsToFullScreen: true
     skin: gruvbox
+    useFullGVRTitle: true
   skipLatestRevCheck: true
   disablePodCounting: true
   shellPod:
-    image: busybox:1.35.0
+    image: busybox
     namespace: default
     limits:
       cpu: 100m
