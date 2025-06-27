@@ -18,6 +18,4 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.proto" },
   { import = "astrocommunity.pack.full-dadbod" },
-  -- Colorscheme
-  { import = "astrocommunity.colorscheme.catppuccin" },
 }

@@ -9,7 +9,7 @@ k9s:
     enableMouse: true
     headless: false
     logoless: true
-    crumbsless: false
+    crumbsless: true
     splashless: true
     reactive: true
     noIcons: false
@@ -30,10 +30,11 @@ k9s:
       namespaces: []
       labels: {}
   logger:
-    tail: 100
+    tail: 500
     buffer: 5000
     sinceSeconds: -1
-    textWrap: false
+    textWrap: true
+    disableAutoscroll: false
     showTime: true
   thresholds:
     cpu:

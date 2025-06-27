@@ -3,18 +3,20 @@
 # Author: [@indiebrain](https://github.com/indiebrain)
 # -----------------------------------------------------------------------------
 
-# Styles...
-foreground: &foreground "#ebdbb2"
-background: &background "#272727"
-current_line: &current_line "#ebdbb2"
-selection: &selection "#3c3735"
-comment: &comment "#bdad93"
-cyan: &cyan "#689d69"
-green: &green "#989719"
-orange: &orange "#d79920"
-magenta: &magenta "#b16185"
-blue: &blue "#448488"
-red: &red "#cc231c"
+# ------------------------------------------
+# Gruvbox Material Dark Medium Theme for k9s
+# ------------------------------------------
+foreground: &foreground "#d4be98"
+background: &background "#282828"
+current_line: &current_line "#d4be98"
+selection: &selection "#3c3836"
+comment: &comment "#928374"
+cyan: &cyan "#89b482"
+green: &green "#a9b665"
+orange: &orange "#e78a4e"
+magenta: &magenta "#d3869b"
+blue: &blue "#7daea3"
+red: &red "#ea6962"
 
 k9s:
   body:
@@ -71,7 +73,7 @@ k9s:
       filterColor: *magenta
   views:
     charts:
-      bgColor: background
+      bgColor: *background
       defaultDialColors:
         - *blue
         - *red
@@ -81,7 +83,7 @@ k9s:
     table:
       fgColor: *foreground
       bgColor: *background
-      cursorFgColor: "#fff"
+      cursorFgColor: "#ffffff"
       cursorBgColor: *current_line
       header:
         fgColor: *foreground
@@ -92,7 +94,7 @@ k9s:
       bgColor: *background
       cursorColor: *current_line
       graphicColor: *blue
-      showIcons: false
+      showIcons: true
     yaml:
       keyColor: *magenta
       colonColor: *blue
