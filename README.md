@@ -30,11 +30,13 @@ This is my .dotfiles repository. It contains my configuration files and scripts 
 - [yazi](https://github.com/sxyazi/yazi) - A terminal file manager that is fast, simple, and easy to use.
 - [ffmpeg](https://git.ffmpeg.org/ffmpeg.git) - A complete, cross-platform solution to record, convert and stream audio and video.
 - [s5cmd](https://github.com/peak/s5cmd) - Parallel S3 and local filesystem execution tool.
+- [yabai](https://github.com/koekeishiya/yabai) - A tiling window manager for macOS.
+- [skhd.zig](https://github.com/jackielii/skhd.zig) - A hotkey daemon for macOS, written in Zig.
 
 All that in one easy command:
 
 ```bash
-brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew" "glow" "yazi" "ffmpeg" "imagemagick" "resvg" "poppler" "fd" "peak/tap/s5cmd"
+brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew" "glow" "yazi" "ffmpeg" "imagemagick" "resvg" "poppler" "fd" "peak/tap/s5cmd" "koekeishiya/formulae/yabai" "jackielii/tap/skhd.zig"
 ```
 
 Installation of python tools:
