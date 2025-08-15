@@ -14,7 +14,7 @@ plugins:
     confirm: true
     args:
       - -c
-      - "kubectl debug -it --context $CONTEXT -n $NAMESPACE $NAME --image=busybox:glibc --share-processes -- sh"
+      - "kubectl debug -it --context $CONTEXT -n $NAMESPACE $NAME --image=${REGISTRY_URL:+${REGISTRY_URL}/hub.docker.com/}busybox:glibc --share-processes -- sh"
   spawn-pvc-pod:
     shortCut: Shift-P
     confirm: true

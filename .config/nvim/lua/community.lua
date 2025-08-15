@@ -13,6 +13,7 @@ return {
   { import = "astrocommunity.pack.python-ruff" },
   { import = "astrocommunity.pack.templ" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.terraform" },
   { import = "astrocommunity.pack.xml" },
   { import = "astrocommunity.pack.ruby" },
   { import = "astrocommunity.pack.sql" },
