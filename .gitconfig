@@ -8,9 +8,16 @@
   editor = nvim
   pager = delta --dark --line-numbers --diff-so-fancy --paging=never
 	autocrlf = true
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  dark = true
 [alias]
   c = commit -s
   commit = commit --signoff
+[merge]
+  conflictstyle = zdiff3
 [pull]
   rebase = true
 [rerere]

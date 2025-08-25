@@ -40,3 +40,15 @@ plugins:
         kubectl wait -n $NAMESPACE --for=condition=Ready pod/$POD --timeout=60s && \
         kubectl exec -n $NAMESPACE -it $POD -- /bin/sh
         kubectl delete pod $POD -n $NAMESPACE --ignore-not-found --grace-period=5
+  mc-pod:
+    shortCut: Shift-M
+    description: "Spawn a MinIO Client pod"
+    scopes:
+      - all
+    background: false
+    command: bash
+    args:
+      - -c
+      - |
+        kubectl delete pod minio-debug -n $NAMESPACE --ignore-not-found --grace-period=5 && \
+        kubectl run --image ${REGISTRY_URL:+${REGISTRY_URL}/hub.docker.com}/minio/mc minio-debug -n $NAMESPACE -rm --restart=Never -it -- /bin/sh

@@ -8,10 +8,11 @@ plugins:
       - customresourcedefinitions
     command: kubectl
     background: false
+    confirm: true
     args:
       - explore
-      - -n
-      - $NAMESPACE
       - --context
       - $CONTEXT
-      - $COL-KIND
+      - --api-version
+      - $COL-GROUP/$COL-VERSIONS
+      - $COL-NAME
