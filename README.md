@@ -32,11 +32,13 @@ This is my .dotfiles repository. It contains my configuration files and scripts 
 - [s5cmd](https://github.com/peak/s5cmd) - Parallel S3 and local filesystem execution tool.
 - [yabai](https://github.com/koekeishiya/yabai) - A tiling window manager for macOS.
 - [skhd.zig](https://github.com/jackielii/skhd.zig) - A hotkey daemon for macOS, written in Zig.
+- [gonzo](https://github.com/control-theory/gonzo) - The Go based TUI log analysis tool.
 
 All that in one easy command:
 
 ```bash
-brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew" "glow" "yazi" "ffmpeg" "imagemagick" "resvg" "poppler" "fd" "peak/tap/s5cmd" "koekeishiya/formulae/yabai" "jackielii/tap/skhd.zig"
+brew tap control-theory/gonzo
+brew install "zoxide" "yadm" "zellij" "bat" "lsd" "atuin" "arkade" "ripgrep" "fzf" "helm" "kubectl" "ruby" "neovim" "uv" "lazygit" "kustomize" "derailed/k9s/k9s" "jq" "vault" "go" "stern" "norwoodj/tap/helm-docs" "krew" "glow" "yazi" "ffmpeg" "imagemagick" "resvg" "poppler" "fd" "peak/tap/s5cmd" "koekeishiya/formulae/yabai" "jackielii/tap/skhd.zig" "gonzo"
 ```
 
 Installation of python tools:

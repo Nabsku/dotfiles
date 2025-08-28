@@ -1,3 +1,6 @@
 [user]
 	name = Yannick Wahner
 	email = thenabsku@gmail.com
+	signingkey = F5C7ACF3A860916AB747B8394B1867E79A29C8E4
+[commit]
+	gpgsign = true
