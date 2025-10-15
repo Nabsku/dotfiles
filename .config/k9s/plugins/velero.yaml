@@ -1,0 +1,19 @@
+plugins:
+  explore:
+    shortCut: Shift-T
+    description: Trigger Schedule
+    scopes:
+      - schedules
+    command: velero
+    background: false
+    confirm: true
+    args:
+      - backup
+      - --kubecontext
+      - $CONTEXT
+      - create
+      - --from-schedule
+      - $NAME
+      - -n
+      - $NAMESPACE
+

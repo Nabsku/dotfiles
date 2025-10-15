@@ -7,7 +7,7 @@
 [core]
   editor = nvim
   pager = delta --dark --line-numbers --diff-so-fancy --paging=never
-	autocrlf = true
+	autocrlf = false
 [interactive]
   diffFilter = delta --color-only
 [delta]
@@ -22,7 +22,6 @@
   rebase = true
 [rerere]
   enabled = true
-
 [includeIf "gitdir:~/github/"]
   path = ~/.gitconfig-github
 
